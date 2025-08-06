@@ -8,13 +8,15 @@ const nextConfig: NextConfig = {
   },
 
   rewrites: async () => {
-    return [
-      {
-        source: "/:path*",
-        missing: [{ type: "header", key: CUSTOM_HEADER, value: "true" }],
-        destination: "https://bjak.my/:path*",
-      },
-    ];
+    return {
+      fallback: [
+        {
+          source: "/:path*",
+          missing: [{ type: "header", key: CUSTOM_HEADER, value: "true" }],
+          destination: "https://bjak.my/:path*",
+        },
+      ],
+    };
   },
 };
 
