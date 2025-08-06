@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/_next/static/:path*",
+      "missing": [
+        {
+          "type": "file",
+          "path": "_next/static/:path*"
+        }
+      ],
+      "destination": "https://bjak.my/_next/static/:path*"
+    },
+    {
+      "source": "/_next/data/:path*",
+      "missing": [
+        {
+          "type": "file",
+          "path": "_next/data/:path*"
+        }
+      ],
+      "destination": "https://bjak.my/_next/data/:path*"
+    }
+  ]
+}
