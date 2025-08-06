@@ -1,0 +1,12 @@
+{
+  "headers": [
+    {
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "x-internal-file-proxy"
+        }
+      ]
+    }
+  ]
+}
