@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/_next/static/(.*)",
-      "middlewarePath": "./middleware.js",
+      "middlewarePath": "middleware.js",
       "continue": true
     }
   ]
