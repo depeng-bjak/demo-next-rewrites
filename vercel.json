@@ -1,13 +1,9 @@
 {
   "headers": [
     {
-      "headers": [
-        {
-          "source": "/_next/static/(.*)",
-          "key": "Vary",
-          "value": "x-internal-file-proxy"
-        }
-      ]
+      "source": "/_next/static/(.*)",
+      "key": "Vary",
+      "value": "x-internal-file-proxy"
     }
   ]
 }
