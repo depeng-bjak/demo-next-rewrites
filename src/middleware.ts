@@ -12,6 +12,17 @@ export default async function middleware(request: Request) {
 
   const url = new URL(request.url);
 
+  if (url.pathname.startsWith("/blog/") || url.pathname === "/blog") {
+    const proxyUrl = new URL("https://bjak.my");
+    proxyUrl.pathname = url.pathname;
+
+    return await fetch(proxyUrl, {
+      method: request.method,
+      headers: request.headers,
+      body: request.body,
+    });
+  }
+
   // Redirect old paths
   if (url.pathname.startsWith("/_next/static/")) {
     console.log("checking if file exist in current build");
