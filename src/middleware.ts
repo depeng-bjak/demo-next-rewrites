@@ -41,7 +41,7 @@ export default async function middleware(request: Request) {
 
     console.log("file does not exist in current build, proxying to bjak.my");
     // proxy to bjak.my
-    const proxyUrl = new URL("https://bjak.my");
+    const proxyUrl = new URL("https://web.dev.bjak.my");
     proxyUrl.pathname = url.pathname;
     return NextResponse.rewrite(proxyUrl);
   }

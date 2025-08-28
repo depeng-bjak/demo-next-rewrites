@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
         {
           source: "/:path*",
           missing: [{ type: "header", key: CUSTOM_HEADER, value: "true" }],
-          destination: "https://bjak.my/:path*",
+          destination: "https://web.dev.bjak.my/:path*",
         },
       ],
     };
